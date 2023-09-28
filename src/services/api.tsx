@@ -4,6 +4,6 @@ const devURL = '/';
 const productionURL = 'https://infinite-bliss-server.onrender.com';
 
 export const api = axios.create({
-    baseURL: devURL, 
+    baseURL: productionURL, 
     withCredentials: true
 });
