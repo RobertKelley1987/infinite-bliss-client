@@ -12,6 +12,7 @@ const HomePage = () => {
     const [apparel, setApparel] = useState<Apparel[]>([]);
     const [music, setMusic] = useState<Album[]>([]);
     const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const getAllMusic = async () => {
@@ -25,8 +26,10 @@ const HomePage = () => {
         }
 
         setErrorMessage('');
+        setLoading(true);
         getAllMusic();
-        getAllApparel();;
+        getAllApparel();
+        setLoading(false);
     }, []);
 
     // Get featured apparel and music
@@ -64,21 +67,25 @@ const HomePage = () => {
                         heading="Featured Apparel" 
                         items={featuredApparel.slice(0, MAX_LIST_SIZE)}
                         path='/apparel/featured'
+                        loading={loading}
                     />
                     <HomePageSection 
                         heading="New Apparel" 
                         items={newestApparel.slice(0, MAX_LIST_SIZE)}
                         path='/apparel/new'
+                        loading={loading}
                     />
                     <HomePageSection 
                         heading="Featured Music" 
                         items={featuredMusic.slice(0, MAX_LIST_SIZE)}
                         path='/music/featured'
+                        loading={loading}
                     />
                     <HomePageSection 
                         heading="New Music" 
                         items={newestMusic.slice(0, MAX_LIST_SIZE)}
                         path='/music/new'
+                        loading={loading}
                     />
                 </main>
             </div>

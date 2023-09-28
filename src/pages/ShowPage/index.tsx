@@ -22,6 +22,10 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
     const [confirmItemAdded, setConfirmItemAdded] = useState(false);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         let timeoutId: NodeJS.Timeout;
 
         if(confirmItemAdded) {
