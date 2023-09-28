@@ -1,4 +1,5 @@
 import { api } from './api';
+import { httpFormat } from '../utils/formatting';
 import { Artist, Category } from '../types';
 
 const products = {
@@ -15,7 +16,7 @@ const products = {
         return await api.get(`/${categorySlug}`);
     },
     findByArtist: async (artist: Artist) => {
-        const artistSlug = artist.toLowerCase();
+        const artistSlug = httpFormat(artist);
         return await api.get(`/artists/${artistSlug}`);
     }
 }

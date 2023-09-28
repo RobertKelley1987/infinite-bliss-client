@@ -39,9 +39,10 @@ function ArtistPage() {
         }
 
         setLoading(true);
-        if(artistCollections.includes(collectionName)) {
-            assertIsArtist(collectionName);
-            getCollection(collectionName);
+        const artist = ARTIST_PAGE_LOOKUP[collectionName];
+        if(ALL_ARTISTS.includes(artist)) {
+            assertIsArtist(artist);
+            getCollection(artist);
             setErrorMessage('');
         } else {
             setErrorMessage('Collection not found.');
