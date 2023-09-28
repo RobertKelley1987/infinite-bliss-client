@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios'; 
+import products from '../../services/products';
 import { ALL_ARTISTS, ARTIST_PAGE_LOOKUP } from '../../constants';
 import { convertToFilterOptions } from '../../utils';
 import { httpFormat } from '../../utils/formatting';
@@ -9,7 +9,7 @@ import Collection from '../../components/Collection';
 import ArtistBanner from './ArtistBanner';
 import ListFilter from '../../components/ListFilter';
 import BackLink from '../../components/BackLink';
-import { Category, Product, ProductType, ProductFilterOption } from '../../types';
+import { Category, Product, ProductType, ProductFilterOption, Artist } from '../../types';
 import './ArtistPage.css';
 
 const artistCollections = ALL_ARTISTS.map(artist => httpFormat(artist));
@@ -27,8 +27,8 @@ function ArtistPage() {
             return;
         }
 
-        const getCollection = async () => {
-            const { data: { collection, categories, error } } = await axios.get(`/artists/${collectionName}`);
+        const getCollection = async (artist: Artist) => {
+            const { data: { collection, categories, error } } = await products.findByArtist(artist)
             if(error) {
                 setErrorMessage(error);
             } else {
@@ -40,7 +40,8 @@ function ArtistPage() {
 
         setLoading(true);
         if(artistCollections.includes(collectionName)) {
-            getCollection();
+            assertIsArtist(collectionName);
+            getCollection(collectionName);
             setErrorMessage('');
         } else {
             setErrorMessage('Collection not found.');

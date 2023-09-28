@@ -1,5 +1,5 @@
 import { api } from './api';
-import { Category } from '../types';
+import { Artist, Category } from '../types';
 
 const products = {
     findCollection: async (category: Category, collection: string) => {
@@ -13,6 +13,10 @@ const products = {
     findByCategory: async (category: Category) => {
         const categorySlug = category.toLowerCase();
         return await api.get(`/${categorySlug}`);
+    },
+    findByArtist: async (artist: Artist) => {
+        const artistSlug = artist.toLowerCase();
+        return await api.get(`/artists/${artistSlug}`);
     }
 }
 
