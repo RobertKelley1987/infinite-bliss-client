@@ -12,14 +12,14 @@ import BackLink from '../../components/BackLink';
 import { Category, Product, ProductType, ProductFilterOption, Artist } from '../../types';
 import './ArtistPage.css';
 
-const artistCollections = ALL_ARTISTS.map(artist => httpFormat(artist));
-
 function ArtistPage() {
     const { collectionName } = useParams();
     const [collection, setCollection] = useState<Product[]>([]);
     const [categories, setCategories] = useState<ProductFilterOption<Category>[]>([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(true);
+
+    const artist = collectionName ? ARTIST_PAGE_LOOKUP[collectionName] : '';
     
     useEffect(() => {
         if(!collectionName) {
@@ -39,7 +39,6 @@ function ArtistPage() {
         }
 
         setLoading(true);
-        const artist = ARTIST_PAGE_LOOKUP[collectionName];
         if(ALL_ARTISTS.includes(artist)) {
             assertIsArtist(artist);
             getCollection(artist);
@@ -66,14 +65,13 @@ function ArtistPage() {
         } else if(errorMessage || !collectionName || !collection.length) {
             element = <p className="artist-page-error-message">{errorMessage}</p>;
         } else {
-            const artistName = ARTIST_PAGE_LOOKUP[collectionName];
-            assertIsArtist(artistName);
+            assertIsArtist(artist);
             element = <Collection<Product, ProductType> 
                 items={selectedNames.length > 0 ? filteredCollection : collection} 
-                collection={artistName}
-                backLink={<BackLink text={artistName} />}
+                collection={artist}
+                backLink={<BackLink text={artist} />}
                 filter={categories.length > 1 ? filter : undefined} 
-                banner={<ArtistBanner artist={artistName} />}
+                banner={<ArtistBanner artist={artist} />}
             />
         }
 

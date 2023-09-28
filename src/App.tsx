@@ -151,10 +151,7 @@ const App = () => {
           } />
           <Route 
             path='/music/:collectionName' 
-            element={<CollectionPage<Album, MusicProduct> 
-              category='Music' 
-              collections={[...musicProductPages, 'featured']} 
-            />} 
+            element={<CollectionPage<Album, MusicProduct> category='Music' collections={musicProductPages} />} 
           />
           <Route path='/music/:collectionName/products/:itemId' element={
             <MusicShowPage dispatch={dispatch} setCartIsVisible={setCartIsVisible} />
@@ -162,10 +159,7 @@ const App = () => {
           <Route 
             path='/apparel/:collectionName' 
             element={
-              <CollectionPage<Apparel, ApparelProduct> 
-                category='Apparel' 
-                collections={[...apparelProductPages, 'featured']} 
-              />
+              <CollectionPage<Apparel, ApparelProduct> category='Apparel' collections={apparelProductPages} />
             } 
           />
           <Route path='/apparel/:collectionName/products/:itemId' element={

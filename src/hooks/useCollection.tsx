@@ -18,7 +18,8 @@ function useCollection<T extends Item<K>, K>(collections: string[], category: Ca
 
         const configFilterOptions = (productTypes: K[]) => {
             const filterOptions = convertToFilterOptions<K>(productTypes);
-            const defaultFilterOption = category === 'Music' && collectionName === 'new' ? 'LP' : null;
+            const defaultIsLP = category === 'Music' && (collectionName === 'new' || collectionName === 'featured');
+            const defaultFilterOption = defaultIsLP ? 'LP' : null;
             const defaultOptionIndex = filterOptions.findIndex(option => option.name === defaultFilterOption);
             if(defaultOptionIndex !== -1) {
                 filterOptions[defaultOptionIndex].selected = true;
