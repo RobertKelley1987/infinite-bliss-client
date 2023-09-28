@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const productionURL = 'https://infinite-bliss-react-store.onrender.com/';
+const productionURL = '/';
 
 export const api = axios.create({
     baseURL: productionURL, 

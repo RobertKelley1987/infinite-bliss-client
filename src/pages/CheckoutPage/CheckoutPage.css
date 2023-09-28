@@ -39,6 +39,7 @@
         "form summary";
         grid-template-columns: 55% 45%;
         grid-template-rows: min-content auto;
+        min-height: 100vh;
     }
 
     .checkout-page-wrapper {
