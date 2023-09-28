@@ -1,0 +1,61 @@
+.show-page {
+    max-width: 1000px;
+    margin: 0 2rem 4rem 2rem;
+}
+
+.show-page-product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.show-page-heading,
+.show-page-heading-small,
+.show-page-price {
+    font-family: var(--sans-serif);
+}
+
+.show-page-heading {
+    font-size: var(--huge-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.show-page-heading-small {
+    font-size: var(--small-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.show-page-price {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.show-page-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif);
+    gap: 1rem;
+    width: 100%;
+}
+
+.show-page-cart-button {
+    justify-content: center;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .show-page-product-grid {
+        flex-direction: row;
+    }
+
+    .show-page-text-wrapper {
+        gap: 2rem;
+        width: 40%;
+    }
+
+    .show-page-cart-button {
+        width: 50%;
+    }
+}

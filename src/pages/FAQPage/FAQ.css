@@ -1,0 +1,23 @@
+.faq-question {
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+    display: flex;
+    font-size: var(--small-font);
+    font-weight: 500;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.faq-question:hover {
+    cursor: pointer;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1rem 0 1rem 2.5rem;
+}
+
+.faq-symbol {
+    font-size: 2rem;
+}

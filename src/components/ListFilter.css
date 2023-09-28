@@ -1,0 +1,39 @@
+.list-filter {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif);
+    gap: 1rem;
+}
+
+.list-filter-heading {
+    font-size: var(--small-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.list-filter-heading-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-filter-heading-wrapper:focus-visible {
+    color: var(--accent);
+    outline: none;
+}
+
+.list-filter-heading-wrapper:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .list-filter-heading {
+        font-size: var(--big-font);
+    }
+
+    .list-filter-heading-wrapper:hover {
+        color: var(--black);
+        cursor: default;
+    }
+}

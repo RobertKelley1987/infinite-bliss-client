@@ -1,0 +1,23 @@
+.list-item-img {
+    width: 100%;
+}
+
+.list-item-name,
+.list-item-price {
+    font-family: var(--sans-serif);
+    font-size: var(--small-font);
+}
+
+.list-item-name {
+    font-weight: 500;
+    margin: 1rem 0 .5rem 0;
+}
+
+.list-item-price {
+    font-weight: 300;
+}
+
+.list-item:hover .list-item-name,
+.list-item:hover .list-item-price {
+    color: var(--accent);
+}

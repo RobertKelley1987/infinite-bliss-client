@@ -1,0 +1,9 @@
+.phone-input {
+    border: 1px solid var(--black);
+    padding: .75rem;
+    width: 100%;
+}
+
+.phone-input-error {
+    border: 1px solid red;
+}

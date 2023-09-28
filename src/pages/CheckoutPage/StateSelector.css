@@ -1,0 +1,50 @@
+.state-selector {
+    align-items: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: 1px solid var(--black);
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .75rem;
+    width: 100%;
+}
+
+.state-selector:focus-visible {
+    border: 1px solid var(--accent);
+    outline: none;
+}
+
+.state-selector:hover {
+    cursor: pointer;
+}
+
+.state-selector-wrapper {
+    justify-content: flex-end;
+    position: relative;
+}
+
+.state-selector-error {
+    border: 1px solid red;
+}
+
+.state-selector-disabled {
+    color: var(--placeholder-color);
+}
+
+.state-selector-arrow {
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    height: 1rem;
+    justify-content: center;
+    position: absolute;
+    right: .75rem;
+    top: 50%;
+    transform: translateY(calc(-50% + 1px));
+    width: 1rem;
+    z-index: -1;
+}

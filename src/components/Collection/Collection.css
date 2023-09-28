@@ -1,0 +1,18 @@
+.collection {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 4rem 2rem;
+    max-width: 1000px;
+}
+
+.collection-list {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: auto;
+}
+
+@media (min-width: 800px) {
+    .collection-list {
+        grid-template-columns: auto auto;
+    }
+}

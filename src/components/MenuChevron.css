@@ -1,0 +1,7 @@
+.menu-chevron {
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    height: 1rem;
+    width: 1.5rem;
+}

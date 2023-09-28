@@ -1,0 +1,34 @@
+.shipping-method-form-wrapper {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.shipping-method-form-heading {
+    font-family: var(--sans-serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.shipping-method-form-fieldset {
+    border: 1px solid var(--black);
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.shipping-method-form-label {
+    border-bottom: 1px solid var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.shipping-method-form-label:hover {
+    cursor: pointer;
+}
+
+.shipping-method-form-radio {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: auto auto;
+}

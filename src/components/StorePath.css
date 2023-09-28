@@ -1,0 +1,16 @@
+.store-path {
+    font-family: var(--sans-serif);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+a.store-path-item:hover {
+    color: var(--accent);
+}
+
+@media (min-width: 800px) {
+    .store-path {
+        margin: 2rem 0;
+        text-align: left;
+    }
+}

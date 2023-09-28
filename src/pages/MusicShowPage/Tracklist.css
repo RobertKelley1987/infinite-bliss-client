@@ -1,0 +1,9 @@
+.tracklist {
+    margin: 2rem 0 0 0;
+}
+
+.tracklist-heading {
+    font-size: var(--small-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}

@@ -1,0 +1,30 @@
+.checkout-item {
+    align-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 5fr auto;
+}
+
+.checkout-item-img {
+    width: 100%;
+}
+
+.checkout-item-text > * {
+    display: block;
+}
+
+.checkout-item-price {
+    width: min-content;
+}
+
+@media (min-width: 1000px) {
+    .checkout-item {
+        grid-gap: 1rem;
+    }
+}
+
+@media (min-width: 550px) {
+    .checkout-item {
+        grid-template-columns: 2fr 7fr auto;
+    }
+}

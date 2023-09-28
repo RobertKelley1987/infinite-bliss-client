@@ -1,0 +1,51 @@
+.checkout-header {
+    align-self: start;
+    display: grid;
+    grid-gap: 1rem;
+    grid-area: header;
+    justify-self: start;
+    margin: 0 0 2rem 0;
+    padding: 4rem 2rem 0 2rem;
+}
+
+/* Do not use font size vars for header logo */
+.checkout-header-logo {
+    font-family: var(--display-font);
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.checkout-header-logo:hover,
+.checkout-header:focus-visible {
+    color: var(--accent);
+}
+
+.checkout-header-nav {
+    align-items: center;
+    display: flex;
+    gap: .25rem;
+}
+
+.checkout-header-link {
+    background: none;
+    border: none;
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0;
+}
+
+a.checkout-header-link:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .checkout-header {
+        padding: 4rem 4rem 0 4rem;
+    }
+}

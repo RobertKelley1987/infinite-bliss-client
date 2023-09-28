@@ -1,0 +1,68 @@
+.sort-selector-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 .5rem 0;
+    position: relative;
+}
+
+.sort-selector {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 0rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.sort-selector-wrapper:hover,
+.sort-selector-wrapper:hover .sort-selector,
+.sort-selector:focus-visible,
+.sort-selector:focus-visible + span {
+    color: var(--accent);
+}
+
+.sort-selector:focus-visible {
+    outline: none;
+}
+
+.sort-selector:hover,
+.sort-selector option:hover {
+    cursor: pointer;
+}
+
+.sort-selector-arrow {
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    height: 1rem;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+    width: 1rem;
+    z-index: -1;
+}
+
+@media (min-width: 800px) {
+    .sort-selector {
+        padding: .5rem;
+        width: 235px;
+    }
+
+    .sort-selector-arrow {
+        right: .5rem;
+    }
+
+    .sort-selector-wrapper {
+        margin: 0 0 2rem 0;
+    }
+}

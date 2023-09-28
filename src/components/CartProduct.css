@@ -1,0 +1,138 @@
+.cart-product {
+    align-items: center;
+    display: grid;
+    font-family: var(--sans-serif);
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    
+}
+
+.cart-product-img {
+    width: 100%;
+}
+
+.cart-product-name {
+    font-size: var(--medium-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cart-product-name-small {
+    font-size: var(--small-font);
+    font-weight: 300;
+}
+
+.cart-product-name-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.cart-product-price,
+.cart-product-total {
+    font-size: var(--medium-font);
+}
+
+.cart-product-price-small,
+.cart-product-total-small {
+    font-size: var(--small-font);
+}
+
+.cart-product-price-small {
+    font-weight: 500;
+    margin-bottom: .25rem;
+}
+
+.cart-product-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.cart-product-text-small {
+    gap: .5rem;
+}
+
+.cart-product-total-label {
+    font-weight: 500;
+}
+
+.cart-product-close-button {
+    align-items: center;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    display: flex;
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 300;
+    gap: .25rem;
+    margin: .3rem 0 0 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.cart-product-close-button:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.cart-product-close-button:focus-visible {
+    color: var(--accent);
+    outline: none;
+}
+
+.cart-product-close-icon {
+    align-items: center;
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+    transform: translateY(1px);
+}
+
+.cart-product-name-link:hover {
+    color: var(--accent);
+}
+
+@media (min-width: 1100px) {
+    .cart-product-close-button::before {
+        content: attr(data-text);
+        text-transform: uppercase;
+    }
+
+    .cart-product-close-button-small::before {
+        content:'';
+    }
+}
+
+@media (min-width: 550px) {
+    .cart-product {
+        grid-gap: 2rem;
+        min-width: 400px;
+    }
+
+    .cart-product-small {
+        grid-gap: 1rem;
+    }
+
+    .cart-product-text {
+        gap: 1rem;
+    }
+
+    .cart-product-text-small {
+        gap: 1rem;
+    }
+
+    .cart-product-name {
+        font-size: var(--big-font);
+    }
+
+    .cart-product-name-small {
+        font-size: var(--small-font);
+    }
+
+    .cart-product-name-wrapper {
+        gap: 1rem;
+    }
+}

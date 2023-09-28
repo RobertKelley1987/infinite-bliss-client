@@ -1,0 +1,35 @@
+.address-form-name-wrapper,
+.address-form-location-wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100%;
+}
+
+.address-form-location-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.address-form-name-wrapper {
+    grid-template-columns: 1fr;
+}
+
+.address-form-name-wrapper > *,
+.address-form-location-wrapper > * {
+    width: 100%;
+}
+
+@media (min-width: 525px) {
+    .address-form-name-wrapper,
+    .address-form-location-wrapper {
+        grid-template-rows: auto;
+    }
+
+    .address-form-name-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }    
+
+    .address-form-location-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

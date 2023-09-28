@@ -1,0 +1,35 @@
+.order-summary {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: auto auto;
+}
+
+.order-summary-numbers {
+    display: grid;
+    grid-gap: .5rem;
+}
+
+.order-summary-total-value {
+    font-weight: 500;
+}
+
+.order-summary-total-label {
+    text-transform: uppercase;
+}
+
+.order-summary-items {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.order-summary-subtotal,
+.order-summary-shipping-cost,
+.order-summary-total-value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary-numbers,
+.order-summary-items {
+    font-family: var(--sans-serif);
+}

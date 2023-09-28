@@ -1,0 +1,35 @@
+.menu-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button-icon {
+    align-items: center;
+    color: var(--black);
+    display: flex;
+    font-size: 2rem;
+    height: 1rem;
+    justify-content: center;
+    width: 1rem;
+}
+
+.menu-button:hover .menu-button-icon,
+.menu-button:focus-visible .menu-button-icon {
+    color: var(--accent);
+}
+
+.menu-button:focus-visible {
+    outline: none;
+}
+
+@media (min-width: 800px) {
+    .menu-button {
+        display: none
+    }
+}

@@ -1,0 +1,9 @@
+.artist-banner {
+    filter: invert(1);
+    width: 100%;
+}
+
+.artist-banner-wrapper {
+    border-bottom: 1px solid var(--black);
+    display: flex;
+}

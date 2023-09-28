@@ -1,0 +1,34 @@
+.order-summary-dropdown {
+    display: grid;
+    font-family: var(--sans-serif);
+    grid-gap: 1rem;
+}
+
+.order-summary-dropdown-heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: .9;
+}
+
+.order-summary-dropdown-heading-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.order-summary-dropdown-heading-wrapper .menu-chevron {
+    transform: translateY(1.5px);
+}
+
+.order-summary-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary-dropdown-header:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.order-summary-dropdown-heading-total {
+    font-weight: 500;
+}

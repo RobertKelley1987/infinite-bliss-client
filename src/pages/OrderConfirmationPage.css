@@ -1,0 +1,48 @@
+.order-confirmation-page {
+    flex: 1 0 100%;
+    font-family: var(--sans-serif);
+    max-width: 1000px;
+    padding: 2rem
+}
+
+.order-confirmation-page-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.order-confirmation-page-text-block > span {
+    display: block;
+}
+
+.order-confirmation-page-heading-1,
+.order-confirmation-page-heading-2 {
+    font-weight: 500;
+}
+
+.order-confirmation-page-heading-1 {
+    margin: 0 0 1rem 0;
+}
+
+.order-confirmation-page-summary-heading {
+    margin: 0 0 1rem 0;
+}
+
+.order-confirmation-page-text-block {
+    display: grid;
+}
+
+.order-confirmation-page-text {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media (min-width: 800px) {
+    .order-confirmation-page-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-confirmation-page-summary-heading {
+        margin: 0 0 .25rem 0;
+    }
+}

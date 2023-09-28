@@ -1,0 +1,35 @@
+.menu-list {
+    padding: 0 0 0 1rem;
+}
+
+.menu-list-heading-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.menu-list-heading-wrapper:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.menu-list-item {
+    font-size: var(--small-font);
+    font-weight: 300;
+    padding: .5rem 0;
+}
+
+.menu-list-item:hover a {
+    color: var(--accent);
+}
+
+@media(min-width: 800px) {
+    .menu-list {
+        padding: 0;
+    }
+    
+    .menu-list-wrapper {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,15 @@
+.payment-form-input-wrapper {
+    border: 1px solid var(--black);
+    padding: .75rem;
+}
+
+.payment-form-cvc-and-expiry {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.payment-form-button {
+    margin: 2rem 0 0 0;
+    width: 100%;
+}

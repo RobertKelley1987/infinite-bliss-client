@@ -1,0 +1,305 @@
+/* IMPORT "EB GARAMOND", "KANIT" AND "OPEN SANS" FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  /* COLORS */
+  --black: rgb(40, 40, 40);
+  --accent: rgb(117, 86, 255);
+  --placeholder-color: gray;
+
+  /* FONTS */
+  --display-font: 'EB Garamond', serif; 
+  --sans-serif: 'Kanit', sans-serif;
+
+  /* FONT SIZES*/
+  --huge-font: 1.25rem;
+  --big-font: 1.25rem;
+  --medium-font: 1rem;
+  --small-font: 1rem;
+}
+
+@media (min-width: 550px) {
+  :root {
+    --huge-font: 2.5rem;
+    --big-font: 1.5rem;
+    --medium-font: 1.25rem;
+  }
+}
+
+/* GLOBAL */
+body {
+  color: var(--black);
+  font-weight: 300;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  background: none;
+}
+
+option {
+  color: var(--black);
+}
+
+input::placeholder,
+option:disabled {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
+/* UTILITY CLASSES */
+.button {
+  align-items: center;
+  background: white;
+  border: 1px solid var(--black);
+  color: var(--black);
+  display: inline-flex;
+  font-family: var(--sans-serif);
+  font-size: var(--small-font);
+  font-weight: 500;
+  gap: .2rem;
+  justify-content: center;
+  letter-spacing: .05rem;
+  padding: .75rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--accent);
+  color: var(--black);
+  cursor: pointer;
+  outline: none;
+}
+
+.button:disabled {
+  opacity: 70%;
+}
+
+.button:hover:disabled {
+  background-color: white;
+  color: var(--black);
+  cursor: default;
+}
+
+.button-arrow {
+  align-items: center;
+  display: flex;
+  height: 1rem;
+  width: 1.25rem;
+}
+
+.flipped {
+  transform: rotate(180deg) translateX(-8px);
+}
+
+.address > * {
+  display: block;
+}
+
+.page-container {
+  font-family: var(--sans-serif);
+  font-size: 1rem;
+  padding: 2rem 2rem 4rem 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.heading-1,
+.heading-2 {
+  font-weight: 500;
+}
+
+.heading-1 {
+  font-size: var(--huge-font);
+}
+
+.heading-2 {
+  font-size: var(--big-font);   
+}
+
+.list-with-discs {
+  padding: 0 0 0 2rem;
+}
+
+.list-with-discs > li {
+  list-style-type: disc;
+}
+
+.hidden {
+  height: 0px;
+  left: 10_000px;
+  position: fixed;
+  visibility: hidden;
+  width: 0px;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: .1px solid currentColor;
+  color: var(--black);
+  display: grid;
+  font: inherit;
+  height: 1rem;
+  margin: 0;
+  place-content: center;
+  width: 1rem;
+}
+
+.checkbox::before {
+  box-shadow: inset 1em 1em var(--accent);
+  content:'';
+  height: 0.5rem;
+  transform: scale(0);
+  width: 0.5rem;
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.checkbox:focus-visible {
+  border: 1px solid var(--accent);
+  outline: none;
+}
+
+.checkbox-label {
+  display: grid;
+  font: 300 1rem var(--sans-serif);
+  gap: .5em;
+  grid-template-columns: 1em auto;
+  line-height: 1.1;
+}
+
+.checkbox:focus-visible + span,
+.checkbox-label:hover {
+  color: var(--accent);
+}
+
+.checkbox-label:hover .checkbox {
+  border: 1px solid var(--accent);
+}
+
+.checkbox-label:hover,
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.plain-text {
+  color: var(--black);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font);
+}
+
+.plain-text-link:hover {
+  color: var(--accent);
+  cursor: pointer
+}
+
+/* UTILITY CLASSES -- FORMS */
+.form,
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    font-family: var(--sans-serif);
+    gap: 2rem;
+}
+
+.form-section {
+    gap: 1rem;
+}
+
+.form-heading {
+    font-family: var(--sans-serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.form-input {
+    border: 1px solid var(--black);
+    line-height: 1.15;
+    padding: 1rem;
+    width: 100%;
+}
+
+.form-select,
+.form-input {
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+.form-input:focus-visible {
+    border: 1px solid var(--accent);
+    outline: none;
+}
+
+.form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif);
+    width: 100%;
+}
+
+.form-input-error {
+    border: 1px solid red;
+}
+
+.form-error {
+    color: red;
+    line-height: 1;
+    margin-top: .25rem;
+}
+
+.form-option {
+    font-weight: 300;
+}
+
+.form-label {
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+
+/* GOOGLE ICONS */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
+}
