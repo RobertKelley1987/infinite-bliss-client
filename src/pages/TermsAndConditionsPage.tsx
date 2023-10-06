@@ -11,7 +11,7 @@ const TermsAndConditionsPage = () => {
             <h1 className="heading-1">Terms and Conditions</h1>
 
             <p>This is a fake e-commerce website, built solely as a web development portfolio project. THIS IS NOT A REAL STORE. 
-            The page below contains some boilerplate terms and conditions I found in a terms and conditions generator</p> 
+            The page below contains some boilerplate terms and conditions I found in a terms and conditions generator.</p> 
             
             <p>These terms and conditions govern the use of infinitebliss.com. This site is owned and operated by Robert Kelley.
             By using this site, you indicate that you have read and understand these terms and conditions and agree to abide by them at all times.</p>
