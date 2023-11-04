@@ -9,7 +9,6 @@ import { CartItem, CartAction } from '../../types';
 import './SiteHeader.css';
 
 type SiteHeaderProps = {
-    // clearFilter: () => void,
     cart: CartItem[],
     dispatch: React.Dispatch<CartAction>,
     viewingCartPage: boolean,
