@@ -47,7 +47,7 @@ const CheckoutHeader = ({ checkoutPhase }: CheckoutHeaderProps) => {
                 <ConditionalLink
                     isLink={linkStates.shipping} 
                     className="checkout-header-link" 
-                    to='/checkout/info'
+                    to='/checkout/shipping'
                 >
                     Shipping
                 </ConditionalLink>

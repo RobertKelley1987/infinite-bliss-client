@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { api } from  '../../services/api';
 import { CartItem } from "../../types";
 
 const useClientSecret = (cart: CartItem[]) => {
@@ -7,7 +7,7 @@ const useClientSecret = (cart: CartItem[]) => {
 
     useEffect(() => {
         const createPaymentIntent = async () => {
-            const { data } = await axios.post('/payment-intents', { cart });
+            const { data } = await api.post('/payment-intents', { cart });
             setClientSecret(data.clientSecret);
         }
 
