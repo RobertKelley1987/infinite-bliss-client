@@ -136,7 +136,8 @@ const App = () => {
           <Route 
             path='/order-success' 
             element={
-              <OrderConfirmationPage order={confirmedOrder} setConfirmedOrder={setConfirmedOrder} />} 
+              <OrderConfirmationPage order={confirmedOrder} setConfirmedOrder={setConfirmedOrder} />
+            } 
           />
           <Route 
             path='/order-error' 

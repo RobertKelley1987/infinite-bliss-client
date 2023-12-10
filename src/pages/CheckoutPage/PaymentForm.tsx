@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { api } from '../../services/api';
 import { StripeError } from '@stripe/stripe-js';
 import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
 import { Order, PendingOrder } from '../../types';
@@ -72,7 +72,7 @@ const PaymentForm = (props: PaymentFormProps) => {
         if(result.error) {
             handlePaymentError(result.error);
         } else {
-            const { data } = await axios.post('/orders', { order });
+            const { data } = await api.post('/orders', { order });
             if(data.error) {
                 navigate('/order-error');
             } else {

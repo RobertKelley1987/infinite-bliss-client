@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const devURL = '/';
-const productionURL = 'https://infinite-bliss-server.onrender.com';
+let baseURL = '/';
+if(process.env.NODE_ENV === 'production') {
+    baseURL = 'https://infinite-bliss-server.onrender.com';
+}
 
-export const api = axios.create({
-    baseURL: productionURL, 
-    withCredentials: true
-});
+export const api = axios.create({ baseURL, withCredentials: true });
